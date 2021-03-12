@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import s from './RegisterView.module.css';
 import { authOperations } from '../../Redux/Auth';
@@ -29,7 +31,7 @@ class RegisterView extends Component {
         
     return (
       <div className={s.container}>
-        <h2>Страница регистрации</h2>
+        <h2 className={s.title}>Страница регистрации</h2>
         <form className={s.form} onSubmit={this.handleFormSubmit}>
           <label className={s.formLabel}>
              Имя
@@ -38,7 +40,7 @@ class RegisterView extends Component {
               name="name"
               onChange={this.handleChange}
               value={name}
-              className={s.formInput}
+              className={s.input}
             />
           </label>
           <label className={s.formLabel}>
@@ -48,7 +50,7 @@ class RegisterView extends Component {
               name="email"
               onChange={this.handleChange}
               value={email}
-              className={s.formInput}
+              className={s.input}
             />
           </label>
           <label className={s.formLabel}>
@@ -58,12 +60,10 @@ class RegisterView extends Component {
               name="password"
               onChange={this.handleChange}
               value={password}
-              className={s.formInput}
+              className={s.input}
             />
           </label>
-          <button type="submit" className={s.formButton}>
-            Зарегистрироваться
-          </button>
+          <Button type="submit" variant="primary">Зарегистрироваться</Button>
         </form>
       </div>
     );

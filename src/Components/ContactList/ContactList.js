@@ -11,10 +11,10 @@ function ContactList({ contacts, onRemove }) {
   return (
     < TransitionGroup component="ul" className={s.list}>
       {contacts.length > 0 ?
-       (contacts.map(({ name, phone, id }) => (
+       (contacts.map(({ name, number, id }) => (
         <CSSTransition key={id} timeout={250} classNames={fadeTransition}>
           <li  className={s.item}>
-          {name}: {phone}
+          {name}: {number}
           <button
             className={s.button}
             type="button"
