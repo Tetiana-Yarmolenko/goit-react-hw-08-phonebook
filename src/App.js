@@ -1,4 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react';
+
 import { Switch} from 'react-router-dom';
 import { connect } from 'react-redux';
 import PrivateRoute from './Components/PrivateRoute';
@@ -8,6 +9,7 @@ import Container from './Components/Container/Container';
 import AppBar from './Components/AppBar/AppBar';
 import Loader from './Components/Loader/Loader'
 import { authOperations } from "./Redux/Auth";
+import './App.css';
 
 const HomeView = lazy(() => import('./Views/HomeView/HomeView'));
 const PhonebookView = lazy(() => import('./Views/PhonebookView/PhonebookView'));

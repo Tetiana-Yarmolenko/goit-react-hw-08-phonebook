@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { CSSTransition } from "react-transition-group";
 import s from "./PhonebookView.module.css";
 
-
 import ContactForm from "../../Components/ContactForm/ContactForm";
 import ContactList from "../../Components/ContactList/ContactList";
 import Filter from "../../Components/Filter/Filter";
